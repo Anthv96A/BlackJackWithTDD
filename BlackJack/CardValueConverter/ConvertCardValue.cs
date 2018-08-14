@@ -9,8 +9,7 @@ namespace BlackJack.CardValueConverter
     public class ConvertCardValue : IConvertCardValue
     {
        public string ConvertValueFromCard(string cardValue)
-        {
-
+       {
             if (cardValue == "jack" || cardValue == "queen" || cardValue == "king")
             {
                 return "10";
@@ -23,6 +22,6 @@ namespace BlackJack.CardValueConverter
             {
                 return cardValue;
             }
-        }
+       }
     }
 }
