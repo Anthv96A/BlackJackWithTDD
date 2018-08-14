@@ -1,4 +1,6 @@
-﻿using BlackJack.InitialiseDeck;
+﻿using BlackJack.CardValueConverter;
+using BlackJack.ConvertString;
+using BlackJack.InitialiseDeck;
 using BlackJack.Models;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,7 @@ namespace BlackJack
         private static IRemoveCard removeCard = new RemoveCard();
         private static IBust bust = new Bust();
         private static ITakeCard takeCard = new TakeCardFromDeck();
-        private static ICalculateScore calculateScore = new CalculateScore();
+        private static ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
         private static ICheckWinner checkWinner = new CheckWinner();
 
         private static bool isPlayersTurn = (r.Next(0,4) > 2) ? true : false;
@@ -111,6 +113,7 @@ namespace BlackJack
 
                         if (dealer.TotalScore == 21)
                         {
+                            Console.WriteLine("Dealer Twists");
                             break;
                         }
 

@@ -80,6 +80,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardValueConverter\ConvertCardValue.cs" />
+    <Compile Include="CardValueConverter\IConvertCardValue.cs" />
+    <Compile Include="ConvertString\ConvertStringToInt.cs" />
+    <Compile Include="ConvertString\IConvertStringToInt.cs" />
     <Compile Include="InitialiseDeck\IShuffleDeck.cs" />
     <Compile Include="InitialiseDeck\ShuffleDeck.cs" />
     <Compile Include="Models\AbstractPlayer.cs" />

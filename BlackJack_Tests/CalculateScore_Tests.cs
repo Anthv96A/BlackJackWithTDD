@@ -1,6 +1,10 @@
-﻿using BlackJack;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
 using System.Collections.Generic;
+using BlackJack;
+using BlackJack.CardValueConverter;
+using BlackJack.ConvertString;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace BlackJack_Tests
 {
@@ -21,7 +25,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 5.
@@ -47,7 +52,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 12.
@@ -73,7 +79,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 15.
@@ -99,7 +106,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 15.
@@ -126,9 +134,9 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
-
             // Then I should expected the values to be 15.
             Assert.AreEqual(15, result);
         }
@@ -155,7 +163,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 22.
@@ -185,7 +194,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 18.
@@ -214,7 +224,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 18.
@@ -244,7 +255,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 18.
@@ -274,7 +286,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 19.
@@ -307,7 +320,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 18.
@@ -344,7 +358,8 @@ namespace BlackJack_Tests
             };
 
             // When I call the calculator score method with list of cards
-            ICalculateScore calculateScore = new CalculateScore();
+            // And I pass in a card value converter
+            ICalculateScore calculateScore = new CalculateScore(new ConvertCardValue(), new ConvertStringToInt());
             int result = calculateScore.CalculateTotalCardScore(cards);
 
             // Then I should expected the values to be 21.
